@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <audio autoplay>
+    <audio autoplay muted id="myAudio">
         <source src="cancion.mp3" type="audio/mpeg">
     </audio>
 
@@ -118,9 +118,15 @@
         document.getElementById('dia' + i).textContent = nombresDias[diaSiguiente];
     }
 
-    let audio = document.querySelector('audio');
+   // Obtener el elemento de audio
+    let audio = document.getElementById('myAudio');
 
-    //ajustar el volumen
+    // Desactivar el silencio después de que la página se haya cargado
+    window.addEventListener('load', function() {
+        audio.muted = false;
+    });
+
+    // Ajustar el volumen
     audio.volume = 0.02;
 
 </script>
