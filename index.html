@@ -123,11 +123,15 @@
 
     // Desactivar el silencio después de que la página se haya cargado
     window.addEventListener('load', function() {
-        audio.muted = false;
-    });
+        // Preguntar al usuario si desea reproducir el audio
+        let respuesta = confirm('¿Deseas reproducir el audio?');
 
-    // Ajustar el volumen
-    audio.volume = 0.02;
+        // Si el usuario acepta, desactivar el silencio y ajustar el volumen
+        if (respuesta) {
+            audio.muted = false;
+            audio.volume = 0.02;
+        }
+    });
 
 </script>
 
