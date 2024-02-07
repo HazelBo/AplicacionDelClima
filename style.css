@@ -142,7 +142,19 @@ body{
 
 .btn-container{
     padding: 25px 35px;
+    display: flex;
+    justify-content: space-around;
 }
+
+.btn-container a {
+    width: 180px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 
 .loc-button{
     outline: none;
